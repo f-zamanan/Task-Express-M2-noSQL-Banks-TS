@@ -7,9 +7,7 @@ const notFoundHandler = (
   next: NextFunction
 ) => {
   console.log(err);
-  res
-    .status(404)
-    .json({ message: `Not found at path: ${req.path}`, error: err.message });
+  res.status(404).json({ message: `Not found at path: ${req.path}` });
 };
 
 export default notFoundHandler;
